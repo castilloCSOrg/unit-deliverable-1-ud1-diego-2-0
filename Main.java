@@ -11,7 +11,24 @@
 *	Example of a battle between a monster and the player with how much damage is dealt to a monster when an attack card is played and how much block is gained when playing a block card.
 *********************************************
 *	ALGORITHM:
-*	<Pseudocode here>
+*	<WHILE playerHealth > 0 AND slimeHealth > 0 DO
+    PRINT "Combat Start!" and player & slime health labels
+    PRINT playerHealth and slimeHealth formatted below health labels
+    INCREASE turnCount by 1
+    PRINT "Turn [turnCount]!"
+    
+    PRINT playerName + " used Attack!"
+    CALL Main.attackPlayed() to execute player's attack and PRINT updated slime health
+    
+    PRINT "Slime used Attack!"
+    CALL Main.slimeAttackPlayed() to execute slime's attack and PRINT updated player health
+END WHILE
+
+IF playerHealth > 0 THEN
+    PRINT playerName + " wins!"
+ELSE
+    PRINT "Slime wins!"
+END IF>
 *********************************************
 *	STATIC METHODS:
 * public static double attackPlayed()
